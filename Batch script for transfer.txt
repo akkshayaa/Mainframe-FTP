@@ -1,0 +1,15 @@
+@echo off
+set /P "=_" < NUL > "Enter password"	
+findstr /A:1E /V "^$" "Enter password" NUL > CON	
+del "Enter password"	
+set /P "$pass="	
+cls	
+color 07
+ECHO OPEN 192.168.241.53> TEMP.TXT
+ECHO TPU577>> TEMP.TXT
+ECHO %$pass%>> TEMP.TXT
+ECHO PUT H:\Documents\Desktop\coj\coj.txt 'ops.test.FIX(lFXDOSS0)'>> TEMP.TXT
+ECHO QUIT>>TEMP.TXT
+ftp -i -s:TEMP.TXT
+DEL TEMP.TXT
+pause
