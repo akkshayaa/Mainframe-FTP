@@ -5,10 +5,10 @@ del "Enter password"
 set /P "$pass="	
 cls	
 color 07
-ECHO OPEN 192.168.241.53> TEMP.TXT
-ECHO TPU577>> TEMP.TXT
+ECHO OPEN !!your mainframe ip address!!> TEMP.TXT
+ECHO !!Mainframe username!!>> TEMP.TXT
 ECHO %$pass%>> TEMP.TXT
-ECHO PUT H:\Documents\Desktop\coj\coj.txt 'ops.test.FIX(lFXDOSS0)'>> TEMP.TXT
+ECHO PUT '!!File from Windows!!' '!!Mainframe File Name!!'>> TEMP.TXT
 ECHO QUIT>>TEMP.TXT
 ftp -i -s:TEMP.TXT
 DEL TEMP.TXT
